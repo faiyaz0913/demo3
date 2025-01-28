@@ -1232,6 +1232,26 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
+/* Scrolling animation effect for portfolio-content */
+.portfolio-content.scrolling-effect {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center top;
+  transition: background-position 3s ease;
+  cursor: pointer;
+}
+
+.portfolio-content.scrolling-effect img {
+  width: 100%;
+  height: auto;
+  transition: transform 3s ease;
+}
+
+.portfolio-content.scrolling-effect:hover img {
+  transform: translateY(-20%);
+}
+
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/
@@ -1823,17 +1843,22 @@ section,
               </div>
             </div><!-- End Portfolio Item --> 
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="branding-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Branding 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="branding-3.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details3.html" title="More Details" class="details-link" target="_blank"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
+           <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+  <div class="portfolio-content h-100 scrolling-effect">
+    <img src="branding-3.jpg" class="img-fluid" alt="">
+    <div class="portfolio-info">
+      <h4>Branding 3</h4>
+      <p>Lorem ipsum, dolor sit amet consectetur</p>
+      <a href="branding-3.jpg" title="Branding 3" data-gallery="portfolio-gallery-branding" class="glightbox preview-link">
+        <i class="bi bi-zoom-in"></i>
+      </a>
+      <a href="portfolio-details3.html" title="More Details" class="details-link" target="_blank">
+        <i class="bi bi-link-45deg"></i>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- End Portfolio Item -->
 
 <!--             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
               <div class="portfolio-content h-100">
